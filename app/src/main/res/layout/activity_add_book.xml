@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/canvas" android:fillViewport="true" android:clipToPadding="false">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="THƯ VIỆN CỦA BẠN" android:textColor="@color/forest_soft" android:textSize="11sp" android:letterSpacing="0.1" android:textStyle="bold" />
+        <TextView android:id="@+id/addFormTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="Thêm sách mới" android:textColor="@color/ink" android:textSize="29sp" android:fontFamily="serif" android:textStyle="bold" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Ghi lại cuốn sách để hành trình đọc luôn ở bên bạn." android:textColor="@color/muted" android:textSize="14sp" />
+
+        <TextView style="@style/FieldLabel" android:text="THÔNG TIN SÁCH" android:textSize="11sp" android:textColor="@color/forest_soft" android:letterSpacing="0.09" />
+        <TextView style="@style/FieldLabel" android:text="Tên sách" android:layout_marginTop="7dp" />
+        <EditText android:id="@+id/inputTitle" style="@style/FormInput" android:hint="Ví dụ: Nhà giả kim" android:inputType="textCapSentences" android:autofillHints="bookTitle" />
+        <TextView style="@style/FieldLabel" android:text="Tác giả" />
+        <EditText android:id="@+id/inputAuthor" style="@style/FormInput" android:hint="Tên tác giả" android:inputType="textCapWords" android:autofillHints="personName" />
+        <TextView style="@style/FieldLabel" android:text="Thể loại" />
+        <Spinner android:id="@+id/inputCategory" android:layout_width="match_parent" android:layout_height="52dp" android:background="@drawable/bg_input" android:paddingHorizontal="12dp" />
+        <LinearLayout android:id="@+id/customCategoryGroup" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:layout_marginBottom="6dp" android:text="Tên thể loại mới" android:textColor="@color/ink" android:textSize="13sp" android:textStyle="bold" />
+            <EditText android:id="@+id/inputCustomCategory" android:layout_width="match_parent" android:layout_height="52dp" android:background="@drawable/bg_input" android:hint="Ví dụ: Lịch sử, Tâm lý học, Kinh doanh..." android:inputType="textCapSentences" android:paddingHorizontal="13dp" android:singleLine="true" android:textColor="@color/ink" />
+            <TextView android:id="@+id/customCategoryError" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="20dp" android:paddingTop="3dp" android:textColor="@color/error" android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView style="@style/FieldLabel" android:text="HÀNH TRÌNH ĐỌC" android:textSize="11sp" android:textColor="@color/forest_soft" android:letterSpacing="0.09" />
+        <TextView style="@style/FieldLabel" android:text="Tình trạng" android:layout_marginTop="7dp" />
+        <RadioGroup android:id="@+id/statusGroup" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/bg_card" android:orientation="horizontal" android:padding="5dp">
+            <RadioButton android:id="@+id/statusUnread" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:buttonTint="@color/forest" android:checked="true" android:minHeight="48dp" android:text="Chưa đọc" android:textColor="@color/ink" android:textSize="12sp" />
+            <RadioButton android:id="@+id/statusReading" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:buttonTint="@color/forest" android:minHeight="48dp" android:text="Đang đọc" android:textColor="@color/ink" android:textSize="12sp" />
+            <RadioButton android:id="@+id/statusRead" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:buttonTint="@color/forest" android:minHeight="48dp" android:text="Đã đọc" android:textColor="@color/ink" android:textSize="12sp" />
+        </RadioGroup>
+        <TextView style="@style/FieldLabel" android:text="Đánh giá" />
+        <RatingBar android:id="@+id/inputRating" android:layout_width="wrap_content" android:layout_height="wrap_content" android:numStars="5" android:rating="0" android:stepSize="1" android:progressTint="@color/clay" android:secondaryProgressTint="@color/border" />
+        <TextView style="@style/FieldLabel" android:text="Ghi chú" />
+        <EditText android:id="@+id/inputNotes" style="@style/FormInput" android:gravity="top|start" android:hint="Một vài dòng về cuốn sách…" android:inputType="textMultiLine|textCapSentences" android:minLines="4" android:autofillHints="notes" />
+
+        <Button android:id="@+id/saveBookButton" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="22dp" android:backgroundTint="@color/forest" android:text="Lưu sách" android:textColor="@color/ink" android:textSize="16sp" android:textStyle="bold" />
+        <Button android:id="@+id/cancelAddButton" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="5dp" android:backgroundTint="@color/canvas" android:text="Hủy" android:textColor="@color/muted" />
+    </LinearLayout>
+</ScrollView>

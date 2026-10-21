@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/canvas" android:clipToPadding="false">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="48dp" android:gravity="center_vertical" android:orientation="horizontal">
+            <Button android:id="@+id/backDetailButton" android:layout_width="wrap_content" android:layout_height="42dp" android:minWidth="0dp" android:background="@drawable/bg_chip" android:text="‹  Kệ sách" android:textColor="@color/forest_text" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="end" android:text="CHI TIẾT" android:textColor="@color/muted" android:textSize="11sp" android:letterSpacing="0.1" android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:gravity="center_vertical" android:orientation="horizontal">
+            <TextView android:id="@+id/detailCover" android:layout_width="108dp" android:layout_height="154dp" android:background="@drawable/bg_cover_literature" android:gravity="center" android:text="DM" android:textColor="@color/cover_ink" android:textSize="30sp" android:fontFamily="serif" android:textStyle="bold" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="18dp" android:layout_weight="1" android:orientation="vertical">
+                <TextView android:id="@+id/detailTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/ink" android:textSize="27sp" android:fontFamily="serif" android:textStyle="bold" />
+                <TextView android:id="@+id/detailAuthor" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textColor="@color/muted" android:textSize="16sp" />
+                <TextView android:id="@+id/detailCategory" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:background="@drawable/bg_chip" android:paddingHorizontal="12dp" android:paddingVertical="7dp" android:textColor="@color/forest_text" android:textSize="12sp" android:textStyle="bold" />
+                <TextView android:id="@+id/detailStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:paddingHorizontal="10dp" android:paddingVertical="5dp" android:background="@drawable/bg_chip" android:textColor="@color/success" android:textSize="12sp" android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:background="@drawable/bg_card" android:elevation="3dp" android:gravity="center_vertical" android:orientation="horizontal" android:padding="14dp">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ĐÁNH GIÁ CỦA BẠN" android:textColor="@color/muted" android:textSize="10sp" android:letterSpacing="0.08" android:textStyle="bold" />
+                <RatingBar android:id="@+id/detailRating" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:numStars="5" android:stepSize="1" android:progressTint="@color/clay" android:secondaryProgressTint="@color/border" />
+            </LinearLayout>
+            <Button android:id="@+id/favoriteDetailButton" android:layout_width="48dp" android:layout_height="48dp" android:minWidth="48dp" android:background="@drawable/bg_chip" android:text="♡" android:textColor="@color/clay" android:textSize="22sp" />
+        </LinearLayout>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:text="GHI CHÚ" android:textColor="@color/muted" android:textSize="11sp" android:letterSpacing="0.1" android:textStyle="bold" />
+        <TextView android:id="@+id/detailNotes" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:background="@drawable/bg_card" android:elevation="2dp" android:gravity="top|start" android:minHeight="76dp" android:padding="15dp" android:textColor="@color/ink" android:textSize="15sp" android:lineSpacingExtra="3dp" />
+
+        <Button android:id="@+id/markReadButton" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="22dp" android:backgroundTint="@color/forest" android:text="Đánh dấu đã đọc" android:textColor="@color/ink" android:textSize="15sp" android:textStyle="bold" />
+            <Button android:id="@+id/editBookButton" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="8dp" android:backgroundTint="@color/soft_green" android:text="Chỉnh sửa thông tin" android:textColor="@color/forest_text" />
+        <Button android:id="@+id/deleteBookButton" android:layout_width="match_parent" android:layout_height="44dp" android:layout_marginTop="17dp" android:backgroundTint="@color/soft_clay" android:text="Xóa sách" android:textColor="@color/error" />
+    </LinearLayout>
+</ScrollView>

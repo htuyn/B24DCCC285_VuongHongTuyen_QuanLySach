@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:background="@drawable/bg_card" android:elevation="2dp" android:clickable="true" android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground" android:gravity="center_vertical"
+    android:orientation="horizontal" android:padding="12dp">
+
+    <TextView android:id="@+id/bookCover" android:layout_width="66dp" android:layout_height="94dp"
+        android:background="@drawable/bg_cover_literature" android:gravity="center" android:text="DM"
+        android:textColor="@color/cover_ink" android:textSize="21sp" android:fontFamily="serif" android:textStyle="bold" />
+
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="13dp" android:layout_weight="1" android:orientation="vertical">
+        <TextView android:id="@+id/bookTitle" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:maxLines="2" android:ellipsize="end" android:textColor="@color/ink" android:textSize="16sp" android:fontFamily="serif" android:textStyle="bold" />
+        <TextView android:id="@+id/bookAuthor" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="3dp" android:maxLines="1" android:ellipsize="end" android:textColor="@color/muted" android:textSize="13sp" />
+        <TextView android:id="@+id/bookMeta" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="7dp" android:maxLines="1" android:ellipsize="end" android:textColor="@color/forest_soft" android:textSize="11sp" />
+        <TextView android:id="@+id/bookRating" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="3dp" android:textColor="@color/clay" android:textSize="12sp" android:textStyle="bold" />
+    </LinearLayout>
+
+    <ImageButton android:id="@+id/favoriteButton" android:layout_width="42dp" android:layout_height="48dp"
+        android:layout_gravity="top" android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Yêu thích" android:padding="10dp" android:src="@drawable/ic_heart_off" />
+</LinearLayout>
